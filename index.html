@@ -102,34 +102,35 @@
 		
 		<script type="text/javascript">
 			function findBootstrapEnvironment() {
-			var envs = ['xs', 'sm', 'md', 'lg'];
+				var envs = ['xs', 'sm', 'md', 'lg'];
 
-			var $el = $('<div>');
-			$el.appendTo($('body'));
+				var $el = $('<div>');
+				$el.appendTo($('body'));
 
-			for (var i = envs.length - 1; i >= 0; i--) {
-				var env = envs[i];
+				for (var i = envs.length - 1; i >= 0; i--) {
+					var env = envs[i];
 
-				$el.addClass('hidden-'+env);
-				if ($el.is(':hidden')) {
-					$el.remove();
-					return env;
+					$el.addClass('hidden-'+env);
+					if ($el.is(':hidden')) {
+						$el.remove();
+						return env;
+					}
 				}
 			}
-		}
-	
-		$(document).ready(function(){
 		
-			var cur_env = findBootstrapEnvironment();
-			if ( cur_env === 'xs' | cur_env === 'sm' ){
-				// TODO: set the vertical background
-				$("body").css("background", "url(img/mob.jpg) no-repeat center center fixed");
-				$("body").css("background-size", "cover");
-			} else {
-				// TODO: set the horizontal background
-				$("body").css("background", "url(img/desktop.jpg) no-repeat center center fixed");
-				$("body").css("background-size", "cover");
-			} 
+			$(document).ready(function(){
+			
+				var cur_env = findBootstrapEnvironment();
+				if ( cur_env === 'xs' | cur_env === 'sm' ){
+					// TODO: set the vertical background
+					$("body").css("background", "url(img/mob.jpg) no-repeat center center fixed");
+					$("body").css("background-size", "cover");
+				} else {
+					// TODO: set the horizontal background
+					$("body").css("background", "url(img/desktop.jpg) no-repeat center center fixed");
+					$("body").css("background-size", "cover");
+				}
+			});
 		</script>
 		
 		
