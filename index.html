@@ -54,13 +54,6 @@
 			  </div>
 			  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
 				<ul class="nav navbar-nav float-md-right float-lg-right">
-				  <!--<li class="nav-item hidden-sm-up">
-					<h1>
-						<font color="#5cb85c">Power</font>
-						<img src="img/logo1.png" class="img-responsive" style="max-width:64px; "/>
-						<font color="#808080">Makers</font>
-					</h1>
-				  </li>-->
 				  <li class="nav-item">
 					<div id="loginButton" class="btn btn-lg btn-outline-success btn-block text-xs-center pushdown10">Войти</div>
 				  </li>
@@ -106,5 +99,39 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
+		
+		<script type="text/javascript">
+			function findBootstrapEnvironment() {
+			var envs = ['xs', 'sm', 'md', 'lg'];
+
+			var $el = $('<div>');
+			$el.appendTo($('body'));
+
+			for (var i = envs.length - 1; i >= 0; i--) {
+				var env = envs[i];
+
+				$el.addClass('hidden-'+env);
+				if ($el.is(':hidden')) {
+					$el.remove();
+					return env;
+				}
+			}
+		}
+	
+		$(document).ready(function(){
+		
+			var cur_env = findBootstrapEnvironment();
+			if ( cur_env === 'xs' | cur_env === 'sm' ){
+				// TODO: set the vertical background
+				$("body").css("background", "url(image/mob.jpg) no-repeat center center fixed");
+				$("body").css("background-size", "cover");
+			} else {
+				// TODO: set the horizontal background
+				$("body").css("background", "url(image/desktop.jpg) no-repeat center center fixed");
+				$("body").css("background-size", "cover");
+			} 
+		</script>
+		
+		
 	</body>
 </html>
