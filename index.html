@@ -105,7 +105,7 @@
 		
 		<script type="text/javascript">
 			function findBootstrapEnvironment() {
-			var envs = ['xs', 'sm', 'md', 'lg'];
+			var envs = ['xs-down', 'sm-down', 'md-down', 'lg-down', 'xl-down'];
 
 			var $el = $('<div>');
 			$el.appendTo($('body'));
@@ -124,7 +124,7 @@
 		$(document).ready(function(){
 		
 			var cur_env = findBootstrapEnvironment();
-			if ( cur_env === 'xs' | cur_env === 'sm' ){
+			if ( cur_env === 'xs-down' | cur_env === 'sm-down' ){
 				// TODO: set the vertical background
 				$("body").css("background", "url(img/mob.jpg) no-repeat center center fixed");
 				$("body").css("background-size", "cover");
