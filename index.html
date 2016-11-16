@@ -34,7 +34,7 @@
 	<body>
 		<!-- Fixed navbar -->
 		<div class="container-fluid">
-			<nav id="mainNavigation" class="navbar navbar-light navbar-fixed-top bg-faded animated">
+			<nav id="mainNavigation" class="navbar navbar-light navbar-fixed-top bg-faded headroom">
 				<!--<div class="container-fluid flex-items-xs-top flex-items-md-middle">-->
 				<div class="container-fluid">
 					<div class="row hidden-sm-up">
@@ -159,9 +159,9 @@
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
-															initial: "animated",
-															pinned: "flipInX",
-															unpinned: "flipOutX"
+															initial: "headroom",
+															pinned: "headroom--pinned",
+															unpinned: "headroom--unpinned"
 														  }
 														});
 					headroom.init();
