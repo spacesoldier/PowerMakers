@@ -96,7 +96,7 @@
 			</div>
 		
 		<!--<footer class="footer">-->
-		<nav class="navbar navbar-light navbar-fixed-bottom bg-faded headroom">
+		<nav class="navbar navbar-light navbar-fixed-bottom bg-faded">
 		  <div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-8 col-sm-4 col-md-10">
@@ -156,7 +156,8 @@
 					// grab an element
 					var myNavbar = document.querySelector("#mainNavigation");
 					if(window.location.hash) {
-												myNavbar.classList.add("headroom--unpinned");
+												//myNavbar.classList.add("headroom--unpinned");
+												myNavbar.classList.add("flipOutX");
 											}
 					var headroom = new Headroom(myNavbar, {
 														  offset: 205,
