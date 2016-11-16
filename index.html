@@ -156,18 +156,18 @@
 					// grab an element
 					var myNavbar = document.querySelector("#mainNavigation");
 					if(window.location.hash) {
-												//myNavbar.classList.add("headroom--unpinned");
-												myNavbar.classList.add("flipOutX");
+												myNavbar.classList.add("headroom--unpinned");
+												//myNavbar.classList.add("flipOutX");
 											}
 					var headroom = new Headroom(myNavbar, {
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
 															initial: "headroom",
-															//pinned: "headroom--pinned",
-															pinned: "flipInX",
-															//unpinned: "headroom--unpinned"
-															unpinned: "flipOutX"
+															pinned: "headroom--pinned",
+															//pinned: "flipInX",
+															unpinned: "headroom--unpinned"
+															//unpinned: "flipOutX"
 														  }
 														});
 					headroom.init();
