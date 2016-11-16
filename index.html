@@ -34,7 +34,7 @@
 	<body>
 		<!-- Fixed navbar -->
 		<div class="container-fluid">
-			<nav class="navbar navbar-light navbar-fixed-top bg-faded headroom">
+			<nav id="mainNavigation" class="navbar navbar-light navbar-fixed-top bg-faded">
 				<!--<div class="container-fluid flex-items-xs-top flex-items-md-middle">-->
 				<div class="container-fluid">
 					<div class="row hidden-sm-up">
@@ -149,15 +149,19 @@
 					// TODO: set the horizontal background
 					$("body").css("background", "url(img/desktop.jpg) no-repeat center center fixed");
 					$("body").css("background-size", "cover");
-					$(".headroom").headroom({
-										  "offset": 305,
-										  "tolerance": 5,
-										  "classes": {
-											"initial": "animated",
-											"pinned": "flipInX",
-											"unpinned": "flipOutX"
-										  }
-										});
+					
+					// grab an element
+					var myElement = document.querySelector("#mainNavigation");
+					var headroom = new Headroom(elem, {
+														  "offset": 205,
+														  "tolerance": 5,
+														  "classes": {
+															"initial": "animated",
+															"pinned": "flipInX",
+															"unpinned": "flipOutX"
+														  }
+														});
+headroom.init();
 				}
 			});
 		</script>
