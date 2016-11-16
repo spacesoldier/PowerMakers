@@ -96,7 +96,7 @@
 			</div>
 		
 		<!--<footer class="footer">-->
-		<nav class="navbar navbar-light navbar-fixed-bottom bg-faded">
+		<nav id="mainFooter" class="navbar navbar-light navbar-fixed-bottom bg-faded footroom">
 		  <div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-8 col-sm-4 col-md-10">
@@ -155,10 +155,10 @@
 					
 					// grab an element
 					var myNavbar = document.querySelector("#mainNavigation");
-					if(window.location.hash) {
-												myNavbar.classList.add("headroom--unpinned");
-												//myNavbar.classList.add("flipOutX");
-											}
+					//if(window.location.hash) {
+					//							myNavbar.classList.add("headroom--unpinned");
+					//							//myNavbar.classList.add("flipOutX");
+					//						}
 					var headroom = new Headroom(myNavbar, {
 														  offset: 205,
 														  tolerance: 5,
@@ -171,6 +171,24 @@
 														  }
 														});
 					headroom.init();
+					
+					var myFooter = document.querySelector("#mainFooter");
+					//if(window.location.hash) {
+					//							myFooter.classList.add("headroom--unpinned");
+					//							//myFooter.classList.add("flipOutX");
+					//						}
+					var footroom = new Headroom(myFooter, {
+														  offset: 205,
+														  tolerance: 5,
+														  classes: {
+															initial: "footroom",
+															pinned: "footroom--pinned",
+															//pinned: "flipInX",
+															unpinned: "footroom--unpinned"
+															//unpinned: "flipOutX"
+														  }
+														});
+					footroom.init();
 				}
 			});
 		</script>

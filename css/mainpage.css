@@ -32,11 +32,11 @@ h3 {
 
 
 /* Animation tricks for the navbar */
-.headroom {
+.headroom  .footroom{
     will-change: transform;
     transition: transform 200ms linear;
 }
-.headroom--pinned {
+.headroom--pinned  .footroom--pinned{
     transform: translateY(0%);
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
@@ -48,7 +48,12 @@ h3 {
 	-o-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 }
-
+.footroom--unpinned {
+    transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+}
 
 /*Disable Animation on Mobile Devices*/
 /*
