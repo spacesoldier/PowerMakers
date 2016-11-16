@@ -32,22 +32,38 @@ h3 {
 
 
 /* Animation tricks for the navbar */
-.headroom  .footroom{
+.headroom {
     will-change: transform;
     transition: transform 200ms linear;
 }
-.headroom--pinned  .footroom--pinned{
+
+.footroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+
+.headroom--pinned{
     transform: translateY(0%);
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
 	-o-transform: translateY(0%);
 }
+
+.footroom--pinned{
+    transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+}
+
 .headroom--unpinned {
     transform: translateY(-100%);
 	-webkit-transform: translateY(-100%);
 	-o-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 }
+
 .footroom--unpinned {
     transform: translateY(100%);
 	-webkit-transform: translateY(100%);
