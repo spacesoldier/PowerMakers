@@ -28,7 +28,7 @@
 	<!--<link rel="icon" href="favicon.ico" type="image/x-icon">-->
 	<link rel="icon" href="favicon.ico" type="image/ico">
 	
-	<link href="css/footer.css" rel="stylesheet">
+	<!--<link href="css/footer.css" rel="stylesheet">-->
 	<link href="css/mainpage.css" rel="stylesheet">
   </head>
 	<body>
@@ -162,8 +162,10 @@
 														  tolerance: 5,
 														  classes: {
 															initial: "headroom",
-															pinned: "headroom--pinned",
-															unpinned: "headroom--unpinned"
+															//pinned: "headroom--pinned",
+															pinned: "flipInX",
+															//unpinned: "headroom--unpinned"
+															unpinned: "flipOutX"
 														  }
 														});
 					headroom.init();
