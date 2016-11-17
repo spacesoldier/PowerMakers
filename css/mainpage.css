@@ -30,6 +30,17 @@
   font-weight: 300;
 }
 
+.text-highlight{
+	color: #fff;
+}
+
+.block-highlight{
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+	background-color: #eceeef;
+	border-radius: 0.3rem;
+}
+
 .social_link{
     margin-left:8px;
 }
