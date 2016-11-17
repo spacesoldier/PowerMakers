@@ -24,6 +24,18 @@
   margin-top:30px;
 }
 
+@media (max-width: 576px){
+  .scale-sm-down{
+		font-size: 2vw;
+   }
+}
+
+@media (max-width: 768px){
+  .scale-sm-down{
+		font-size: 3vw;
+   }
+}
+
 
 .display-5 {
   font-size: 2rem;
@@ -32,6 +44,11 @@
 
 .text-highlight{
 	color: #fff;
+}
+
+.text-by-width{
+	text-align: justify;
+	text-indent: 50px;
 }
 
 .block-highlight{
