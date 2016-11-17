@@ -48,6 +48,9 @@
 
 .text-by-width{
 	text-align: justify;
+}
+
+.text-tab-first{
 	text-indent: 50px;
 }
 
