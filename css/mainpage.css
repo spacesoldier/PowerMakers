@@ -2,6 +2,10 @@
   padding-top:100px;
 }
 
+.full-opacity{
+	opacity: 1.0;
+}
+
 .main-opacity{
 	opacity: 0.8;
 }
@@ -20,6 +24,11 @@
   margin-top:30px;
 }
 
+
+.display-5 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 
 /* Make the masthead heading the same height as the navigation */
 h3 {
