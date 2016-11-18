@@ -143,12 +143,8 @@
   }
 }
 
-
-.img-stretch
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.carousel-inner > .carousel-item > img,
+.carousel-inner > .carousel-item > a > img {
   display: block;
   width: 100%;
   height: auto;
