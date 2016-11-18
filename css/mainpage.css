@@ -116,7 +116,7 @@
 
 .carousel-fade {
   .carousel-inner {
-    .item {
+    .carousel-item {
       opacity: 0;
       transition-property: opacity;
     }
