@@ -91,7 +91,7 @@
   position: fixed;
 }
 
-#hero-wrapper .carousel-wrapper,
+.carousel-wrapper,
 #main-carousel {
   height: 100%;
   width: 100%;
@@ -143,6 +143,16 @@
   }
 }
 
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* Make the masthead heading the same height as the navigation */
 h3 {
