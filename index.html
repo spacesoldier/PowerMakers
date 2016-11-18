@@ -73,6 +73,49 @@
 	
 		<div class="container main_container">
 			<div class="row">
+				<div class="carousel-caption">
+					<h1>HELLOOOOOO</h1>
+					<button class="btn-lg btn-success">WOOOOOOOOOOOORLD</button>
+				</div>
+				<div id="main-carousel" class="carousel slide carousel-fade">
+					<ol class="carousel-indicators">
+						<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#main-carousel" data-slide-to="1"></li>
+						<li data-target="#main-carousel" data-slide-to="2"></li>
+						<li data-target="#main-carousel" data-slide-to="3"></li>
+						<li data-target="#main-carousel" data-slide-to="4"></li>
+						<li data-target="#main-carousel" data-slide-to="5"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/robot-lunohod.png">
+						</div>
+						<div class="item">
+							<img src="img/robot-boats.png">
+						</div>
+						<div class="item">
+							<img src="img/team-working.png">
+						</div>
+						<div class="item">
+							<img src="running-boat.png>
+						</div>
+						<div class="item">
+							<img src="http://placekitten.com/1190/800">
+						</div>
+						<div class="item">
+							<img src="http://placekitten.com/1200/800">
+						</div>
+					</div>
+						<!--
+						<a class="left carousel-control" href="#hero-carousel" data-slide="prev">
+						  <i class="fa fa-chevron-left left"></i>
+						</a>
+						<a class="right carousel-control" href="#hero-carousel" data-slide="next">
+						  <i class="fa fa-chevron-right right"></i>
+						</a> -->
+				</div>
+			</div>
+			<div class="row">
 				<div class="jumbotron">
 					<h1 class="display-3 hidden-sm-down">Добро пожаловать в Клуб Юных Мейкеров!</h1>
 					<h1 class="display-5 hidden-sm-up">Добро пожаловать в Клуб Юных Мейкеров!</h1>
@@ -222,51 +265,44 @@
 			
 				var cur_env = findBootstrapEnvironment();
 				if ( cur_env === 'xs-up' | cur_env === 'sm-up' ){
-					// TODO: set the vertical background
+					// set the vertical background
 					$("body").css("background", "url(img/mob.jpg) no-repeat center center fixed");
 					$("body").css("background-size", "cover");
 				} else {
-					// TODO: set the horizontal background
+					// set the horizontal background
 					$("body").css("background", "url(img/desktop.jpg) no-repeat center center fixed");
 					$("body").css("background-size", "cover");
 					
 					// grab an element
 					var myNavbar = document.querySelector("#mainNavigation");
-					//if(window.location.hash) {
-					//							myNavbar.classList.add("headroom--unpinned");
-					//							//myNavbar.classList.add("flipOutX");
-					//						}
 					var headroom = new Headroom(myNavbar, {
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
 															initial: "headroom",
 															pinned: "headroom--pinned",
-															//pinned: "flipInX",
 															unpinned: "headroom--unpinned"
-															//unpinned: "flipOutX"
 														  }
 														});
 					headroom.init();
 					
 					var myFooter = document.querySelector("#mainFooter");
-					//if(window.location.hash) {
-					//							myFooter.classList.add("headroom--unpinned");
-					//							//myFooter.classList.add("flipOutX");
-					//						}
 					var footroom = new Headroom(myFooter, {
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
 															initial: "footroom",
 															pinned: "footroom--pinned",
-															//pinned: "flipInX",
 															unpinned: "footroom--unpinned"
-															//unpinned: "flipOutX"
 														  }
 														});
 					footroom.init();
 				}
+				
+				$('.carousel').carousel({
+				  interval: 3000,
+				  pause: false
+				})
 			});
 		</script>
 		
