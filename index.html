@@ -183,14 +183,15 @@
 					</p>
 				</div>
 			</div>
-			
+		</div>
+
+		<div class="container regform_container">
 			<div class="row text-xs-right block-highlight">
 				<form>
 					<span><img src="img/glyphicons/png/glyphicons-208-remove.png"></span>
 				</form>
 			</div>
 		</div>
-
 
 		<nav id="mainFooter" class="navbar navbar-light navbar-fixed-bottom bg-faded footroom">
 		  <div class="container-fluid">
@@ -235,7 +236,10 @@
 					}
 				}
 			}
-		
+			
+			var headroom = null;
+			var footroom = null;
+			
 			$(document).ready(function(){
 			
 				var cur_env = findBootstrapEnvironment();
@@ -250,7 +254,7 @@
 					
 					// grab an element
 					var myNavbar = document.querySelector("#mainNavigation");
-					var headroom = new Headroom(myNavbar, {
+					headroom = new Headroom(myNavbar, {
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
@@ -262,7 +266,7 @@
 					headroom.init();
 					
 					var myFooter = document.querySelector("#mainFooter");
-					var footroom = new Headroom(myFooter, {
+					footroom = new Headroom(myFooter, {
 														  offset: 205,
 														  tolerance: 5,
 														  classes: {
@@ -280,6 +284,34 @@
 				})
 				
 				$('.reg_power_maker').on('click',function(){
+					if (headroom == null){
+						var myNavbar = document.querySelector("#mainNavigation");
+						headroom = new Headroom(myNavbar, {
+															  offset: 205,
+															  tolerance: 5,
+															  classes: {
+																initial: "headroom",
+																pinned: "headroom--pinned",
+																unpinned: "headroom--unpinned"
+															  }
+															});
+						headroom.init();
+					}
+					if (footroom == null){
+						var myFooter = document.querySelector("#mainFooter");
+						footroom = new Headroom(myFooter, {
+															  offset: 205,
+															  tolerance: 5,
+															  classes: {
+																initial: "footroom",
+																pinned: "footroom--pinned",
+																unpinned: "footroom--unpinned"
+															  }
+															});
+						footroom.init();
+					}
+					headroom.pin();
+					footroom.pin();
 					alert("Kaboom!");
 				});
 			});
