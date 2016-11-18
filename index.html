@@ -187,7 +187,7 @@
 
 		<div class="container regform_container form_hide">
 			<div class="row text-xs-right block-highlight">
-				<button class="btn btn-outline-info"><span><img class="icon-opacity-70" src="img/glyphicons/png/glyphicons-208-remove.png"></span></button>
+				<button class="btn btn-outline-info cancel-reg-button"><span><img class="icon-opacity-70" src="img/glyphicons/png/glyphicons-208-remove.png"></span></button>
 			</div>
 			<div class="row">
 				<form>
@@ -322,12 +322,47 @@
 					$(".regform_container").removeClass("form_hide");
 					$(".regform_container").addClass("form_show");
 					
-					/*
-					$( ".main_container" ).animate({
-											"max-height": "0"
-										  }, 500 );
-										  */
 				});
+				
+				$(".cancel-reg-button").on('click',function(){
+					if (headroom == null){
+						var myNavbar = document.querySelector("#mainNavigation");
+						headroom = new Headroom(myNavbar, {
+															  offset: 205,
+															  tolerance: 5,
+															  classes: {
+																initial: "headroom",
+																pinned: "headroom--pinned",
+																unpinned: "headroom--unpinned"
+															  }
+															});
+						headroom.init();
+					}
+					if (footroom == null){
+						var myFooter = document.querySelector("#mainFooter");
+						footroom = new Headroom(myFooter, {
+															  offset: 205,
+															  tolerance: 5,
+															  classes: {
+																initial: "footroom",
+																pinned: "footroom--pinned",
+																unpinned: "footroom--unpinned"
+															  }
+															});
+						footroom.init();
+					}
+					headroom.pin();
+					footroom.pin();
+					
+					$(".main_container").removeClass("main_hide");
+					$(".main_container").addClass("main_show");
+					
+					$(".regform_container").removeClass("form_show");
+					$(".regform_container").addClass("form_hide");
+					
+					
+				});
+				
 			});
 		</script>
 		
