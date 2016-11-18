@@ -171,7 +171,7 @@ h3 {
 }
 
 .main_show {
-    max-height: auto;
+    max-height: none;
 	transition-property:  max-height;
 	transition: 0.8s ease-in;
 	-webkit-transition: 0.8s ease-in;
