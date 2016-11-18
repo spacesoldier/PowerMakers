@@ -188,7 +188,7 @@
 		<div class="container regform_container form_hide">
 			<div class="row text-xs-right block-highlight">
 				<form>
-					<span><img src="img/glyphicons/png/glyphicons-208-remove.png"></span>
+					<button class="btn-outline-info"><span><img class="icon-opacity-70" src="img/glyphicons/png/glyphicons-208-remove.png"></span></button>
 				</form>
 			</div>
 		</div>
@@ -278,12 +278,12 @@
 					footroom.init();
 				}
 				
-				$('.carousel').carousel({
+				$(".carousel").carousel({
 				  interval: 3000,
 				  pause: false
 				})
 				
-				$('.reg_power_maker').on('click',function(){
+				$(".reg_power_maker").on('click',function(){
 					if (headroom == null){
 						var myNavbar = document.querySelector("#mainNavigation");
 						headroom = new Headroom(myNavbar, {
@@ -312,7 +312,7 @@
 					}
 					headroom.unpin();
 					footroom.unpin();
-					alert("Kaboom!");
+					$(".main_container").addClass("main_hide");
 				});
 			});
 		</script>
