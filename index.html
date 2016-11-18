@@ -315,11 +315,16 @@
 					}
 					headroom.unpin();
 					footroom.unpin();
+					/*
 					$(".main_container").removeClass("main_show");
 					$(".main_container").addClass("main_hide");
 					
 					$(".regform_container").removeClass("form_hide");
 					$(".regform_container").addClass("form_show");
+					*/
+					$( ".main_container" ).animate({
+											max-height: "0"
+										  }, 500 );
 				});
 			});
 		</script>
