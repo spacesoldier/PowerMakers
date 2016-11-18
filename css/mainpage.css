@@ -85,12 +85,9 @@
 }
 
 /* Carousel styling */
-#hero-wrapper {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-}
 
+
+/*
 .carousel-wrapper,
 #main-carousel {
   height: 100%;
@@ -113,6 +110,7 @@
     top: 50%;
   }
 }
+*/
 
 .carousel-fade {
   .carousel-inner {
@@ -142,13 +140,14 @@
     z-index: 2;
   }
 }
-
+/*
 .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   display: block;
   width: 100%;
   height: auto;
 }
+*/
 
 /* Make the masthead heading the same height as the navigation */
 h3 {
