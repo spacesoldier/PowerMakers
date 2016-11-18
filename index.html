@@ -60,7 +60,7 @@
 				  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
 					<ul class="nav navbar-nav float-md-right float-lg-right">
 					  <li class="nav-item">
-						<div id="registerButton" class="btn btn-lg btn-success btn-block text-xs-center pushdown10">Стать Мейкером!</div>
+						<div id="registerButton" class="btn btn-lg btn-success btn-block text-xs-center pushdown10 reg_power_maker">Стать Мейкером!</div>
 					  </li>
 					  <li class="nav-item">
 						<div id="loginButton" class="btn btn-lg btn-outline-success btn-block text-xs-center pushdown10">Войти</div>
@@ -79,7 +79,7 @@
 					<p class="lead text-by-width text-tab-first add-padding">Кто такие Мейкеры? Вкратце - это креативные парни и девчонки, способные построить всё, что вообразимо из того, что есть под рукой. В былые времена их можно было встретить в кружках юных техников. С тех пор многое изменилось, и теперь мейкеры возникают повсюду. Живое воображение, мощное компактное железо, 3D-печать и немножко компьютерной магии - всё что нужно для создания забавных роботов, дронов, различной полезной автоматики. Мы объединили опытных специалистов и создали мощную команду преподавателей, чтобы помочь тебе пройти от идеи до яркого прототипа максимально быстро!</p>
 					<p class="text-xs-center text-sm-center text-md-center text-lg-center text-xl-center">
 						<!--<a class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker" href="#" role="button">Стань Мейкером прямо сейчас!</a>-->
-						<button class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker" role="button">Стань Мейкером прямо сейчас!</button>
+						<button class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker">Стань Мейкером прямо сейчас!</button>
 					</p>
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 						<p class="text-by-width text-tab-first">Здесь мы изучаем азы схемотехники, программируем простейшие устройства на базе Arduino и аналогичных платформах, собираем самодвижущиеся роботизированные устройства, даём вторую жизнь старым игрушкам, строим всевозможные летающие, плавающие модели. Нашей фантазии нет предела!</p>
 						<p class="text-xs-center text-sm-center text-md-center text-lg-center text-xl-center">
 							<!--<a class="btn btn-lg btn-success scale-sm-down reg_power_maker" href="#" role="button">Запишись к нам!</a>-->
-							<button class="btn btn-lg btn-success scale-sm-down reg_power_maker" role="button">Запишись к нам!</button>
+							<button class="btn btn-lg btn-success scale-sm-down reg_power_maker">Запишись к нам!</button>
 						</p>
 					</div>
 				</div>
@@ -105,7 +105,7 @@
 						<p class="text-by-width text-tab-first">Здесь мы изучаем программирование в том виде, как оно есть в реальности. Работаем в командах над проектами, которые придумываем сами. Гибкие методологии разработки, современные инструменты, языки и платформы, контроль версий и тестирование - всё это позволит тебе вжиться в роль настоящего программиста!</p>
 						<p class="text-xs-center text-sm-center text-md-center text-lg-center text-xl-center">
 							<!--<a class="btn btn-lg btn-success scale-sm-down reg_power_maker" href="#" role="button">Запишись к нам!</a>-->
-							<button class="btn btn-lg btn-success scale-sm-down reg_power_maker" role="button">Запишись к нам!</button>
+							<button class="btn btn-lg btn-success scale-sm-down reg_power_maker">Запишись к нам!</button>
 						</p>
 					</div>
 				</div>
@@ -179,7 +179,7 @@
 					<p class="lead">Не тормози! Мы тебя ждём!</p>
 					<p class="text-xs-center text-sm-center text-md-center text-lg-center text-xl-center">
 						<!--<a class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker" href="#" role="button">Стань Мейкером прямо сейчас!</a>-->
-						<button class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker" href="#" role="button">Стань Мейкером прямо сейчас!</button>
+						<button class="btn btn-lg btn-success scale-sm-down btn_wrap reg_power_maker">Стань Мейкером прямо сейчас!</button>
 					</p>
 				</div>
 			</div>
@@ -272,6 +272,10 @@
 				  interval: 3000,
 				  pause: false
 				})
+				
+				$('.reg_power_maker').on('click',function(){
+					alert("Kaboom!");
+				});
 			});
 		</script>
 		
