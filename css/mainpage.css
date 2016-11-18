@@ -163,23 +163,29 @@ h3 {
 
 .main_hide {
     max-height: 0;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.8s ease-out;
+	-webkit-transition: max-height 0.8s ease-out;
+	-moz-transition: max-height 0.8s ease-out;
     overflow: hidden;
 }
 
 .main_show {
-    max-height: none;
-    transition: max-height 0.5s ease-in;
+    max-height: auto;
+	transition: max-height 0.8s ease-in;
+	-webkit-transition: max-height 0.8s ease-in;
+	-moz-transition: max-height 0.8s ease-in;
 }
 
 .form_hide {
     max-height: 0;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.8s ease-out;
+	-webkit-transition: max-height 0.8s ease-in;
+	-moz-transition: max-height 0.8s ease-in;
     overflow: hidden;
 }
 
 .form_show {
-    max-height: 90%;
+    max-height: 90vh;
     transition: max-height 0.5s ease-in;
 }
 
