@@ -84,9 +84,11 @@
     filter: alpha(opacity=70);
 }
 
-.add-padding{
-	padding-left: 4rem;
-	padding-right: 4rem;
+@media (min-width: 768px){
+	.add-padding{
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
 }
 
 /* Make the masthead heading the same height as the navigation */
