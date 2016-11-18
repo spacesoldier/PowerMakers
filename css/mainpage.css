@@ -84,6 +84,10 @@
     filter: alpha(opacity=70);
 }
 
+.add-padding{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
 
 /* Make the masthead heading the same height as the navigation */
 h3 {
