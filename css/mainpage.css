@@ -163,30 +163,36 @@ h3 {
 
 .main_hide {
     max-height: 0;
-    transition: max-height 0.8s ease-out;
-	-webkit-transition: max-height 0.8s ease-out;
-	-moz-transition: max-height 0.8s ease-out;
+	transition-property:  max-height;
+    transition: 0.8s ease-out;
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
     overflow: hidden;
 }
 
 .main_show {
     max-height: auto;
-	transition: max-height 0.8s ease-in;
-	-webkit-transition: max-height 0.8s ease-in;
-	-moz-transition: max-height 0.8s ease-in;
+	transition-property:  max-height;
+	transition: 0.8s ease-in;
+	-webkit-transition: 0.8s ease-in;
+	-moz-transition: 0.8s ease-in;
 }
 
 .form_hide {
     max-height: 0;
-    transition: max-height 0.8s ease-out;
-	-webkit-transition: max-height 0.8s ease-in;
-	-moz-transition: max-height 0.8s ease-in;
+	transition-property:  max-height;
+    transition: 0.8s ease-out;
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
     overflow: hidden;
 }
 
 .form_show {
     max-height: 90vh;
-    transition: max-height 0.5s ease-in;
+	transition-property:  max-height;
+    transition: 0.8s ease-in;
+	-webkit-transition: 0.8s ease-in;
+	-moz-transition: 0.8s ease-in;
 }
 
 .icon-opacity-70{
