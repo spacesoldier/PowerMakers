@@ -187,8 +187,28 @@ h3 {
     overflow: hidden;
 }
 
+.reg_elem_hide{
+	display:none;
+}
+
+.msg_elem_hide{
+	display:none;
+}
+
 .msg_ok_hide{
-	max-height: 0;
+	display:none;
+}
+
+.reg_elem_show{
+	display:none;
+}
+
+.msg_elem_show{
+	display:none;
+}
+
+.msg_ok_show{
+	display:none;
 }
 
 @media (max-width: 767px){
