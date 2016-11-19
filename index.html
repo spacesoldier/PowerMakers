@@ -238,7 +238,7 @@
 		
 		<div id="greetings_message" class="container greetings_container msg_ok_hide block-highlight add-padding msg_ok_hide">
 			<div class="row add-margin-bottom">
-				<div class="col-xs-9 col-md-8 text-xs-center">
+				<div class="col-xs-12 col-md-12 text-xs-center">
 					<h1 class="btn_wrap">УРА!</h1>
 				</div>
 			</div>
@@ -273,7 +273,7 @@
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
 		
 		<script src="js/headroom.min.js"></script>
-		<!--<script src="js/jQuery.headroom.js"></script>-->
+		<script src="js/jquery.md5.js"></script>
 		<script type="text/javascript">
 			
 			function findBootstrapEnvironment() {
@@ -421,8 +421,19 @@
 				
 				$(".send-reg-req-btn").on("click", function(){
 					
+					var userinfo = {
+									name: $("#user-name-input").val(),
+									surname: $("#user-surname-input").val()
+									};
+					var userinfo_str = JSON.stringify(userinfo);
+					var userlogin = $("user-login-input").val();
+					var userpassword = $.md5( $("#user-password-input").val() );
+					var useremail = $("user-email-input").val();
+					var userphone = $("#user-tel-input").val();
+					
 					$(".regform_container").removeClass("form_show");
 					$(".regform_container").addClass("form_hide");
+					$(".regform_container").addClass("reg_elem_hide");
 					
 					$("#greetings_message").removeClass("msg_ok_hide");
 					
