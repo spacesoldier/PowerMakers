@@ -163,13 +163,15 @@
 				<div class="col-md-4 col-sm-12 col-xs-12">
 					<div class="jumbotron">
 						<h3 class="display-5">Контакты</h3>
-						<p>Явки, пароли, прочее</p>
+						<p>Ждём ваших писем:</p>
+						<p>team@powermakers.ru</p>
 					</div>
 				</div>
 				<div class="col-md-8 col-sm-12 col-xs-12">
 					<div class="jumbotron">
-						<h3 class="display-5">Тут всякие карты</h3>
-						<p>Весь мир в труху! Но потом.</p>
+						<h3 class="display-5">Клуб Мейкеров в Коптево</h3>
+						<p>м.Войковская, бульвар Матроса Железняка, д.12</p>
+						<p>каждую субботу, с 10:00 до 14:00</p>
 					</div>
 				</div>
 			</div>
@@ -229,7 +231,20 @@
 			</div>
 			<div class="row">
 				<div class="offset-xs-2 col-xs-8">
-					<button class="btn btn-success btn-lg btn-block">Стать Мейкером!</button>
+					<button class="btn btn-success btn-lg btn-block send-reg-req-btn">Стать Мейкером!</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="greetings_message" class="container greetings_container msg_ok_hide block-highlight add-padding">
+			<div class="row add-margin-bottom">
+				<div class="col-xs-9 col-md-8 text-xs-center">
+					<h1 class="btn_wrap">УРА!</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="offset-xs-2 col-xs-8">
+					<button class="btn btn-success btn-lg btn-block finish-reg-button">O K</button>
 				</div>
 			</div>
 		</div>
@@ -400,6 +415,21 @@
 					$(".regform_container").addClass("form_hide");
 					
 					
+				});
+				
+				$(".send-reg-req-btn").on("click", function(){
+					 
+					$("regform_container").html($("#greetings_message").html());
+					$(".finish-reg-button").on("click",function(){
+						headroom.pin();
+						footroom.pin();
+						$(".main_container").removeClass("main_hide");
+						$(".main_container").addClass("main_show");
+						
+						$(".regform_container").removeClass("form_show");
+						$(".regform_container").addClass("form_hide");
+					});
+				
 				});
 				
 			});

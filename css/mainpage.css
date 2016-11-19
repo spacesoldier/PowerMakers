@@ -187,6 +187,10 @@ h3 {
     overflow: hidden;
 }
 
+.msg_ok_hide{
+	max-height: 0;
+}
+
 @media (max-width: 767px){
 
 	.form_show {
