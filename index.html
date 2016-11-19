@@ -421,30 +421,41 @@
 				
 				$(".send-reg-req-btn").on("click", function(){
 					
-					var userinfo = {
-									name: $("#user-name-input").val(),
-									surname: $("#user-surname-input").val()
-									};
-					var userinfo_str = JSON.stringify(userinfo);
+					var username = $("#user-name-input").val();
+					var usersurname = $("#user-surname-input").val();
 					var userlogin = $("#user-login-input").val();
 					var userpassword = $.md5( $("#user-password-input").val() );
 					var useremail = $("#user-email-input").val();
 					var userphone = $("#user-tel-input").val();
 					
-					$(".regform_container").removeClass("form_show");
-					$(".regform_container").addClass("form_hide");
-					$(".regform_container").addClass("reg_elem_hide");
-					
-					$("#greetings_message").removeClass("msg_ok_hide");
-					
-					$(".finish-reg-button").on("click",function(){
+					$.ajax({
+						type: "POST",
+						url: "http://powermakers.ru/api/register",
+						data: {
+								name: username,
+								surname: usersurname,
+								login: userlogin,
+								password: userpassword,
+								email: useremail,
+								phone: userphone
+							  },
+						success: function(msg){
+									$(".regform_container").removeClass("form_show");
+									$(".regform_container").addClass("form_hide");
+									$(".regform_container").addClass("reg_elem_hide");									
+									$("#greetings_message").removeClass("msg_ok_hide");
+								},
+						//dataType: "json"
+					});
+
+				});
+				
+				$(".finish-reg-button").on("click",function(){
 						headroom.pin();
 						footroom.pin();
 						$("#greetings_message").addClass("msg_ok_hide");
 						$(".main_container").removeClass("main_hide");
 						$(".main_container").addClass("main_show");
-					});
-				
 				});
 				
 			});
