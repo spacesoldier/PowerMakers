@@ -439,14 +439,14 @@
 								email: useremail,
 								phone: userphone
 							  },
-						success: function(msg){
+ 
+						//dataType: "json"
+					}).done (function(msg){
 									$(".regform_container").removeClass("form_show");
 									$(".regform_container").addClass("form_hide");
 									$(".regform_container").addClass("reg_elem_hide");									
 									$("#greetings_message").removeClass("msg_ok_hide");
-								}
-						//dataType: "json"
-					});
+							});
 
 				});
 				
