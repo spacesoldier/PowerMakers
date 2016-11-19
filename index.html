@@ -275,10 +275,11 @@
 			
 			var headroom = null;
 			var footroom = null;
+			var cur_env = null;
 			
 			$(document).ready(function(){
 			
-				var cur_env = findBootstrapEnvironment();
+				cur_env = findBootstrapEnvironment();
 				if ( cur_env === 'xs-up' | cur_env === 'sm-up' ){
 					// set the vertical background
 					$("body").css("background", "url(img/mob.jpg) no-repeat center center fixed");

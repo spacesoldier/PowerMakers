@@ -189,7 +189,6 @@ h3 {
 
 .form_show {
     max-height: 80vh;
-	overflow-y: auto;
 	transition-property:  max-height;
     transition: 0.5s ease-in;
 	-webkit-transition: 0.5s ease-in;
