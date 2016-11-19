@@ -242,7 +242,7 @@
 					<h1 class="btn_wrap">УРА!</h1>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row add-margin-bottom">
 				<div class="offset-xs-2 col-xs-8">
 					<button class="btn btn-success btn-lg btn-block finish-reg-button">O K</button>
 				</div>
@@ -426,9 +426,9 @@
 									surname: $("#user-surname-input").val()
 									};
 					var userinfo_str = JSON.stringify(userinfo);
-					var userlogin = $("user-login-input").val();
+					var userlogin = $("#user-login-input").val();
 					var userpassword = $.md5( $("#user-password-input").val() );
-					var useremail = $("user-email-input").val();
+					var useremail = $("#user-email-input").val();
 					var userphone = $("#user-tel-input").val();
 					
 					$(".regform_container").removeClass("form_show");
