@@ -164,10 +164,10 @@ h3 {
 .main_hide {
     max-height: 0;
 	overflow: hidden;
-	/*transition-property:  max-height;
+	transition-property:  max-height;
     transition: 0.8s ease-out;
 	-webkit-transition: 0.8s ease-out;
-	-moz-transition: 0.8s ease-out;*/
+	-moz-transition: 0.8s ease-out;
 }
 
 .main_show {
