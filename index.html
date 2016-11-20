@@ -374,6 +374,9 @@
 					$(".main_container").removeClass("main_show");
 					$(".main_container").addClass("main_hide");
 					
+					$("#mainNavigation").addClass("reg_elem_hide");
+					$("#mainFooter").addClass("reg_elem_hide");
+					
 					$(".regform_container").removeClass("reg_elem_hide");
 					$(".regform_container").removeClass("form_hide");
 					$(".regform_container").addClass("form_show");
@@ -413,6 +416,9 @@
 					$(".main_container").removeClass("main_hide");
 					$(".main_container").addClass("main_show");
 					
+					$("#mainNavigation").removeClass("reg_elem_hide");
+					$("#mainFooter").removeClass("reg_elem_hide");
+					
 					$(".regform_container").removeClass("form_show");
 					$(".regform_container").addClass("form_hide");
 					$(".regform_container").addClass("reg_elem_hide");
@@ -451,11 +457,13 @@
 				});
 				
 				$(".finish-reg-button").on("click",function(){
-						headroom.pin();
-						footroom.pin();
-						$("#greetings_message").addClass("msg_ok_hide");
-						$(".main_container").removeClass("main_hide");
-						$(".main_container").addClass("main_show");
+					headroom.pin();
+					footroom.pin();
+					$("#mainNavigation").removeClass("reg_elem_hide");
+					$("#mainFooter").removeClass("reg_elem_hide");
+					$("#greetings_message").addClass("msg_ok_hide");
+					$(".main_container").removeClass("main_hide");
+					$(".main_container").addClass("main_show");
 				});
 				
 			});
