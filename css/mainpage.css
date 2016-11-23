@@ -214,12 +214,12 @@ h3 {
 @media (max-width: 767px){
 
 	.form_show {
-		max-height: 75vh;
+		/*max-height: 75vh;
 		overflow-y: auto;
 		transition-property:  max-height;
 		transition: 0.5s ease-in;
 		-webkit-transition: 0.5s ease-in;
-		-moz-transition: 0.5s ease-in;
+		-moz-transition: 0.5s ease-in; */
 	}
 
 }
@@ -229,7 +229,7 @@ h3 {
 	.form_show {
 		min-height: 75vh;
 		overflow-y: auto;
-		transition-property:  max-height;
+		transition-property:  min-height;
 		transition: 0.5s ease-in;
 		-webkit-transition: 0.5s ease-in;
 		-moz-transition: 0.5s ease-in;
